@@ -1,8 +1,14 @@
 import React from 'react'
-import Content, { HTMLContent } from '../Content'
+import Content from '../Content'
 
-const AboutPageTemplate:React.FC<any> = (props) => {
-const { title, content, contentComponent } = props
+interface iAboutPageTemplate {
+  title: any
+  content: any
+  contentComponent: any
+}
+
+const AboutPageTemplate:React.FC<iAboutPageTemplate> = (props) => {
+  const { title, content, contentComponent } = props
   const PageContent = contentComponent || Content
 
   return (
