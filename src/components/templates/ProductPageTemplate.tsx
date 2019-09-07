@@ -4,17 +4,34 @@ import Testimonials from '../Testimonials'
 import Pricing from '../Pricing'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
-const ProductPageTemplate = ({
-  image,
-  title,
-  heading,
-  description,
-  intro,
-  main,
-  testimonials,
-  fullImage,
-  pricing,
-}) => (
+interface iProductPageTemplate {
+  image: any
+  title: any
+  heading: any
+  description: any
+  intro: any
+  main: any
+  testimonials: any
+  fullImage: any
+  pricing: any
+}
+
+
+const ProductPageTemplate:React.FC<iProductPageTemplate> = (props) => {
+
+  const {
+    image,
+    title,
+    heading,
+    description,
+    intro,
+    main,
+    testimonials,
+    fullImage,
+    pricing
+  } = props
+
+  return (
   <div className="content">
     <div
       className="full-width-image-container margin-top-0"
@@ -100,5 +117,6 @@ const ProductPageTemplate = ({
     </section>
   </div>
 )
+}
 
 export default ProductPageTemplate
