@@ -1,16 +1,26 @@
 import React from 'react'
 import { kebabCase } from 'lodash'
 import { Link } from 'gatsby'
-import Content, { HTMLContent } from '../Content'
+import Content from '../Content'
 
-const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  title,
-  helmet,
-}) => {
+interface iBlogPostTemplate {
+  content: any
+  contentComponent: any
+  description: any
+  tags: any
+  title: any
+  helmet: any
+}
+
+const BlogPostTemplate:React.FC<iBlogPostTemplate> = (props) => {
+  const {
+    content,
+    contentComponent,
+    description,
+    tags,
+    title,
+    helmet,
+  } = props
   const PostContent = contentComponent || Content
 
   return (
