@@ -1,14 +1,29 @@
-import React from 'react'
+import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from "gatsby"
 
+import '../../node_modules/normalize.css/normalize.css'
+
+/** https://material-ui.com/customization/theming/#theming */
+import { ThemeProvider } from '@material-ui/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+import deepOrange from '@material-ui/core/colors/deepOrange';
+const theme = createMuiTheme({
+  palette: {
+    primary: deepOrange,
+    secondary: {
+      main: '#f44336',
+    },
+  },
+});
+
 const TemplateWrapper = ({ children }) => {
   const { title, description, lang } = useSiteMetadata()
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Helmet>
         <html lang={lang} />
         <title>{title}</title>
@@ -47,7 +62,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <div>{children}</div>
       <Footer />
-    </div>
+    </ThemeProvider>
   )
 }
 
