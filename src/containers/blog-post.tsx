@@ -6,8 +6,11 @@ import Layout from '../components/Layout'
 import { HTMLContent } from '../components/Content'
 import { BlogPostTemplate } from '../components/templates';
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+const BlogPost = (props) => {
+  
+  const { markdownRemark: post } = props.data
+  const { featuredimage } = props.data.markdownRemark.frontmatter
+  console.log(featuredimage)
 
   return (
     <Layout>
@@ -26,17 +29,11 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        featuredimage={featuredimage}
       />
     </Layout>
   )
 }
-
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
-
 export default BlogPost
 
 export const pageQuery = graphql`
@@ -49,6 +46,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 120, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

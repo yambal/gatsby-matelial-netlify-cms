@@ -2,6 +2,8 @@ import React from 'react'
 import { kebabCase } from 'lodash'
 import { Link } from 'gatsby'
 import Content from '../Content'
+import PreviewCompatibleImage from '../PreviewCompatibleImage'
+import Container from '@material-ui/core/Container';
 
 interface iBlogPostTemplate {
   content: any
@@ -10,6 +12,7 @@ interface iBlogPostTemplate {
   tags: any
   title: any
   helmet: any
+  featuredimage: any
 }
 
 const BlogPostTemplate:React.FC<iBlogPostTemplate> = (props) => {
@@ -20,13 +23,21 @@ const BlogPostTemplate:React.FC<iBlogPostTemplate> = (props) => {
     tags,
     title,
     helmet,
+    featuredimage
   } = props
+
   const PostContent = contentComponent || Content
 
   return (
     <section className="section">
-      {helmet || ''}
-      <div className="container content">
+      {helmet || ''} 
+      <PreviewCompatibleImage
+        imageInfo={{
+          image: featuredimage,
+          alt: `hohoho`,
+        }}
+      />
+      <Container fixed>
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
@@ -48,7 +59,7 @@ const BlogPostTemplate:React.FC<iBlogPostTemplate> = (props) => {
             ) : null}
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
