@@ -1,13 +1,17 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Footer from './Footer'
+import Navbar from './Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from "gatsby"
 
+// normalize.css
 import '../../node_modules/normalize.css/normalize.css'
 
-/** https://material-ui.com/customization/theming/#theming */
+/**
+ * Theming
+ * https://material-ui.com/customization/theming/#theming
+ **/
 import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import deepOrange from '@material-ui/core/colors/deepOrange';
