@@ -3,6 +3,8 @@ import { Link, graphql } from 'gatsby'
 
 import Features from '../Features'
 import BlogRoll from '../BlogRoll'
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 
 interface iIndexPageTemplate {
   image: any
@@ -105,17 +107,13 @@ const IndexPageTemplate:React.FC<iIndexPageTemplate> = (props) => {
                     </Link>
                   </div>
                 </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
+                <Container fixed>
+                  <Typography variant="h4" gutterBottom>Latest stories</Typography>
                   <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
+                  <Link className="btn" to="/blog">
+                    Read more
+                  </Link>
+                </Container>
               </div>
             </div>
           </div>
