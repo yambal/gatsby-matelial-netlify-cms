@@ -35,3 +35,7 @@ const Navbar:React.FC= () => {
 }
 
 export default Navbar
+
+/**
+ * https://material-ui.com/components/app-bar/#hide-app-bar
+ */
