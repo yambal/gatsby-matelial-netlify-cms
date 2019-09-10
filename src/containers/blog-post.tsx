@@ -52,6 +52,14 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+          colors {
+            darkMuted
+            darkVibrant
+            lightMuted
+            lightVibrant
+            muted
+            vibrant
+          }
         }
       }
     }
