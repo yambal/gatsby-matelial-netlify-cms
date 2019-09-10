@@ -8,6 +8,7 @@ module.exports = {
       'こんにちわ、世界',
   },
   plugins: [
+    'gatsby-plugin-extract-image-colors',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',

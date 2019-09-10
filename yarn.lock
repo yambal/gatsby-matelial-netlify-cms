@@ -1669,6 +1669,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.4.tgz#64db61e0359eb5a8d99b55e05c729f130a678b04"
   integrity sha512-W0+n1Y+gK/8G2P/piTkBBN38Qc5Q1ZSO6B5H3QmPCUewaiXOo2GCAWZ4ElZCcNhjJuBSUSLGFUJnmlCn5+nxOQ==
 
+"@types/node@^10.12.18":
+  version "10.14.17"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.17.tgz#b96d4dd3e427382482848948041d3754d40fd5ce"
+  integrity sha512-p/sGgiPaathCfOtqu2fx5Mu1bcjuP8ALFg4xpGgNkcin7LwRyzUKniEHBKdcE1RPsenq5JVPIpMTJSygLboygQ==
+
 "@types/node@^7.0.11":
   version "7.10.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.10.7.tgz#8604623912010235185f1166c7a5a9aa7de9fcd8"
@@ -1778,6 +1783,92 @@
   dependencies:
     lodash.unescape "4.0.1"
     semver "5.5.0"
+
+"@vibrant/color@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/color/-/color-3.2.0-alpha.tgz#b00ae935a8d799a627370ed4004521b08322f150"
+  integrity sha512-LUJ2u+Oz101yObPh41KFIQbgrvXxoMSaPmVR0SH3zaplTcTYJAyNBXNOQPjG20yHcoQin3dcpJRjkFRf+GEB1Q==
+
+"@vibrant/core@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/core/-/core-3.2.0-alpha.tgz#c7c49d491af880770ecf69bc076e50209e6b7222"
+  integrity sha512-y950/Odw/Ui3uKm2tITs//xcdEXhWj8VvLz/+089jRrGMV6hVYYPChndLXMtF2F54F0bCsYqsMYMeyLhT7LOAA==
+  dependencies:
+    "@vibrant/color" "^3.2.0-alpha"
+    "@vibrant/generator" "^3.2.0-alpha"
+    "@vibrant/image" "^3.2.0-alpha"
+    "@vibrant/quantizer" "^3.2.0-alpha"
+    "@vibrant/types" "^3.2.0-alpha"
+    "@vibrant/worker" "^3.2.0-alpha"
+
+"@vibrant/generator-default@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/generator-default/-/generator-default-3.2.0-alpha.tgz#916dc03db426d14d80eed1d428d6f0dfcb959c82"
+  integrity sha512-qNWYlHH2Q4l1+TwDYl2UVpgWK+98tbZpBFh57IDSP2wONZdLHMhbe1cc6d6tAV7dGWMX0Pm3cB47Xnpu4Sj32A==
+  dependencies:
+    "@vibrant/color" "^3.2.0-alpha"
+    "@vibrant/generator" "^3.2.0-alpha"
+
+"@vibrant/generator@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/generator/-/generator-3.2.0-alpha.tgz#ac6fbcb23cc6f935a907710bd841555123af6a57"
+  integrity sha512-QgQ61vVX4INK1zGCh2vg2kwKBWTi9SZ9jnKRoUZQ4AWqQ5R3r2VHVOHqyWvHUIUOisNxsHg2bnJiTspsCKEhVA==
+  dependencies:
+    "@vibrant/color" "^3.2.0-alpha"
+    "@vibrant/types" "^3.2.0-alpha"
+
+"@vibrant/image-browser@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/image-browser/-/image-browser-3.2.0-alpha.tgz#6d31fe8891ab545c7d1efd9b5e62af50b39f7abc"
+  integrity sha512-wzz3mLHc8EL0wlGtuZ6VYvDsE3dQS4KotQqMJSWJv8uA7+Ozufk9+r1SE1B245G2HLfbNtupm9sGXkXAefYl6w==
+  dependencies:
+    "@vibrant/image" "^3.2.0-alpha"
+
+"@vibrant/image-node@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/image-node/-/image-node-3.2.0-alpha.tgz#c91c9bc1fde8e6a489518377cf852a69243759b1"
+  integrity sha512-tMyUW1WCCWCsJOo7ed7uU2YoLufRkSvyRraSrLSA4SXFsVdCZlAXiTxSkwyaYguIAzq6r4Wv5zYK83ibXsCjLg==
+  dependencies:
+    "@vibrant/image" "^3.2.0-alpha"
+    jimp "^0.6.0"
+
+"@vibrant/image@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/image/-/image-3.2.0-alpha.tgz#a49ce943ec8b7ec2607212b43c7f9367045a7d90"
+  integrity sha512-tmCOrSsNBOx/qgpHtTG4WU1xX9chCsRgDRoKnUTMkT6MbqhOxMqVG8CVHmvBNAJ23QhSl43wZCslBvinPof01A==
+  dependencies:
+    "@vibrant/color" "^3.2.0-alpha"
+    "@vibrant/types" "^3.2.0-alpha"
+
+"@vibrant/quantizer-mmcq@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/quantizer-mmcq/-/quantizer-mmcq-3.2.0-alpha.tgz#aae55bc27e8a869d6057f950e418c7a00131f615"
+  integrity sha512-mw7oSC8BLWpykveI0TDgeDNRpd/8bdNO1Q2rIW1pVPtJBRchUT57VFiuzuucZXJVO+o2jepdnf3c+jSUkJktvA==
+  dependencies:
+    "@vibrant/color" "^3.2.0-alpha"
+    "@vibrant/image" "^3.2.0-alpha"
+    "@vibrant/quantizer" "^3.2.0-alpha"
+
+"@vibrant/quantizer@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/quantizer/-/quantizer-3.2.0-alpha.tgz#894795d01fe6f6646cc127765aa6117742194661"
+  integrity sha512-HkV4fkD4g5ZOkZJ01nYQNeVG60QHVzjdwcoEJq8bfOZ4Hq2etl2Nix3IREGQk1evnej2T/5yB/CHM5RtWcFuSw==
+  dependencies:
+    "@vibrant/color" "^3.2.0-alpha"
+    "@vibrant/image" "^3.2.0-alpha"
+    "@vibrant/types" "^3.2.0-alpha"
+
+"@vibrant/types@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/types/-/types-3.2.0-alpha.tgz#2210fa1df981886266a6c05a3845b41b51a544a0"
+  integrity sha512-ocZXP5JII9UU3p0j/B+q+Q29huOuAxYkQ2sn2tsMl4ID5MzXKhOAhaIwQxMJHQXbVgTL5nUuq71PS2RtBHUZLQ==
+
+"@vibrant/worker@^3.2.0-alpha":
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@vibrant/worker/-/worker-3.2.0-alpha.tgz#395c3dd2b60ac1c115fafd29ad9bfa414cbaea8a"
+  integrity sha512-4yN85OA8NOfMXkc3IVQ276GOQTlRK07U+aacnDKdZL+AaOVcdR23mht7yGnTF1mWfrj5FWNEvaFQuLQLP1TUXQ==
+  dependencies:
+    "@vibrant/types" "^3.2.0-alpha"
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
@@ -3712,7 +3803,7 @@ color-string@^1.5.2:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
-color@^3.0.0, color@^3.1.2:
+color@^3.0.0, color@^3.1.1, color@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/color/-/color-3.1.2.tgz#68148e7f85d41ad7649c5fa8c8106f098d229e10"
   integrity sha512-vXTJhHebByxZn3lDvDJYw4lR5+uB3vuoHsuYA5AKuxRVn5wzzIfQKGLBmgdVRHKTJYeK5rvJcHnrd0Li49CFpg==
@@ -4494,7 +4585,7 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@~4.1.0:
   dependencies:
     ms "^2.1.1"
 
-debuglog@*, debuglog@^1.0.1:
+debuglog@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/debuglog/-/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
   integrity sha1-qiT/uaw9+aI1GDfPstJ5NgzXhJI=
@@ -6429,6 +6520,14 @@ gatsby-page-utils@^0.0.17:
     micromatch "^3.1.10"
     slash "^3.0.0"
 
+gatsby-plugin-extract-image-colors@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-extract-image-colors/-/gatsby-plugin-extract-image-colors-0.0.14.tgz#af28e3cd796e76853ea69e1133b21aa388b9d94b"
+  integrity sha512-h1gZmzobCUYpMYR3Y11xAFw0ivaiN9XoD8RGnPTQ1azpJGGrfdx9MMBrnVfdAfpSB3vBWhMbL+0iYEzt9yWVgg==
+  dependencies:
+    color "^3.1.1"
+    node-vibrant "^3.2.0-alpha"
+
 gatsby-plugin-netlify-cms@^4.1.6:
   version "4.1.14"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.1.14.tgz#bb326246e2f592a74098bcd4bd58c708a4c08ae4"
@@ -7963,7 +8062,7 @@ import-local@^2.0.0:
     pkg-dir "^3.0.0"
     resolve-cwd "^2.0.0"
 
-imurmurhash@*, imurmurhash@^0.1.4:
+imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
@@ -8786,7 +8885,7 @@ jest-worker@^24.9.0:
     merge-stream "^2.0.0"
     supports-color "^6.1.0"
 
-jimp@^0.6.4:
+jimp@^0.6.0, jimp@^0.6.4:
   version "0.6.8"
   resolved "https://registry.yarnpkg.com/jimp/-/jimp-0.6.8.tgz#63074984337cc469cd4030946e503e7c02a18b5c"
   integrity sha512-F7emeG7Hp61IM8VFbNvWENLTuHe0ghizWPuP4JS9ujx2r5mCVYEd/zdaz6M2M42ZdN41blxPajLWl9FXo7Mr2Q==
@@ -9434,11 +9533,6 @@ lodash-webpack-plugin@^0.11.4:
   dependencies:
     lodash "^4.17.4"
 
-lodash._baseindexof@*:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/lodash._baseindexof/-/lodash._baseindexof-3.1.0.tgz#fe52b53a1c6761e42618d654e4a25789ed61822c"
-  integrity sha1-/lK1OhxnYeQmGNZU5KJXie1hgiw=
-
 lodash._baseuniq@~4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash._baseuniq/-/lodash._baseuniq-4.6.0.tgz#0ebb44e456814af7905c6212fa2c9b2d51b841e8"
@@ -9447,32 +9541,10 @@ lodash._baseuniq@~4.6.0:
     lodash._createset "~4.0.0"
     lodash._root "~3.0.0"
 
-lodash._bindcallback@*:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/lodash._bindcallback/-/lodash._bindcallback-3.0.1.tgz#e531c27644cf8b57a99e17ed95b35c748789392e"
-  integrity sha1-5THCdkTPi1epnhftlbNcdIeJOS4=
-
-lodash._cacheindexof@*:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/lodash._cacheindexof/-/lodash._cacheindexof-3.0.2.tgz#3dc69ac82498d2ee5e3ce56091bafd2adc7bde92"
-  integrity sha1-PcaayCSY0u5ePOVgkbr9Ktx73pI=
-
-lodash._createcache@*:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/lodash._createcache/-/lodash._createcache-3.1.2.tgz#56d6a064017625e79ebca6b8018e17440bdcf093"
-  integrity sha1-VtagZAF2JeeevKa4AY4XRAvc8JM=
-  dependencies:
-    lodash._getnative "^3.0.0"
-
 lodash._createset@~4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/lodash._createset/-/lodash._createset-4.0.3.tgz#0f4659fbb09d75194fa9e2b88a6644d363c9fe26"
   integrity sha1-D0ZZ+7CddRlPqeK4imZE02PJ/iY=
-
-lodash._getnative@*, lodash._getnative@^3.0.0:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/lodash._getnative/-/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
-  integrity sha1-VwvH3t5G1hzc3mh9ZdPuy6o6r/U=
 
 lodash._root@~3.0.0:
   version "3.0.1"
@@ -9553,11 +9625,6 @@ lodash.mergewith@^4.6.1:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
   integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
-
-lodash.restparam@*:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
-  integrity sha1-k2pOMJ7zMKdkXtQUWYbIWuWyCAU=
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
@@ -10812,6 +10879,19 @@ node-sass@^4.11.0:
     sass-graph "^2.2.4"
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
+
+node-vibrant@^3.2.0-alpha:
+  version "3.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/node-vibrant/-/node-vibrant-3.2.0-alpha.tgz#203edec713a8de9aad435977b5782ffbded7b72d"
+  integrity sha512-qmt7/RS7rOVf1WvJ5QGp1LCvPdpPxLNq0b4w234/6uZDyOvSSkY6ylqLaQVdFeLDuLrpwia79EdAJyjLLmMCCw==
+  dependencies:
+    "@types/node" "^10.12.18"
+    "@vibrant/core" "^3.2.0-alpha"
+    "@vibrant/generator-default" "^3.2.0-alpha"
+    "@vibrant/image-browser" "^3.2.0-alpha"
+    "@vibrant/image-node" "^3.2.0-alpha"
+    "@vibrant/quantizer-mmcq" "^3.2.0-alpha"
+    url "^0.11.0"
 
 noms@0.0.0:
   version "0.0.0"
