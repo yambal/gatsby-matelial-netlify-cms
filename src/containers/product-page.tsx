@@ -85,16 +85,6 @@ export const productPageQuery = graphql`
               }
             }
           }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
         }
         testimonials {
           author

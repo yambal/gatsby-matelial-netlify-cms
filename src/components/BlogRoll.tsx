@@ -10,9 +10,9 @@ const BlogRoll:React.FC<any> = (props) =>  {
   return (
     <Grid container spacing={3}>
       {posts &&
-        posts.map(({ node: post }) => (
-          <Grid item sm={12} md={4} lg={3}>
-            <BrogRollArticle post={post} key={post.id}/>
+        posts.map(({ node: post, index }) => (
+          <Grid item sm={12} md={4} lg={3} key={post.id}>
+            <BrogRollArticle post={post}/>
           </Grid>
         ))}
     </Grid>
@@ -44,6 +44,14 @@ export default () => (
                     fluid(maxWidth: 640, quality: 75) {
                       ...GatsbyImageSharpFluid
                     }
+                  }
+                  colors {
+                    darkMuted
+                    darkVibrant
+                    lightMuted
+                    lightVibrant
+                    muted
+                    vibrant
                   }
                 }
               }
