@@ -5,6 +5,8 @@ import Features from '../Features'
 import BlogRoll from '../BlogRoll'
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import PreviewCompatibleImage from '../PreviewCompatibleImage'
+import FeatureImage from '../FeatureImage';
 
 interface iIndexPageTemplate {
   image: any
@@ -13,7 +15,8 @@ interface iIndexPageTemplate {
   subheading: any
   mainpitch: any
   description: any
-  intro: any
+  intro: any,
+  featuredimage: any,
 }
 
 const IndexPageTemplate:React.FC<iIndexPageTemplate> = (props) => {
@@ -24,59 +27,17 @@ const IndexPageTemplate:React.FC<iIndexPageTemplate> = (props) => {
     subheading,
     mainpitch,
     description,
-    intro
+    intro,
+    featuredimage
   } = props
 
   return (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
+  <div className="hoge">
+    <FeatureImage src={props.featuredimage.childImageSharp.resize.src} />
+    <Container fixed>
+      <pre>{JSON.stringify(props.featuredimage.childImageSharp.resize, null, 2)}</pre>
+    </Container>
+
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
