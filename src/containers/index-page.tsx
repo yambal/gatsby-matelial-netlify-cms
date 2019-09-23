@@ -5,7 +5,7 @@ import { IndexPageTemplate } from '../components/templates';
 
 const IndexPage:React.FC<any> = (props) => {
   const { frontmatter } = props.data.markdownRemark
-  const { image, title, heading, subheading, mainpitch, description, intro } = frontmatter
+  const { image, title, heading, subheading, mainpitch, description, intro, featuredimage } = frontmatter
   return (
     <Layout>
       <IndexPageTemplate
@@ -16,6 +16,7 @@ const IndexPage:React.FC<any> = (props) => {
         mainpitch={mainpitch}
         description={description}
         intro={intro}
+        featuredimage={featuredimage}
       />
     </Layout>
   )
@@ -29,6 +30,16 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 1280, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+            resize(height: 630, width: 1200) {
+              src
+            }
+          }
+        }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

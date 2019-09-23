@@ -1,9 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-const PreviewCompatibleImage = ({ imageInfo }) => {
-  const { alt = '', childImageSharp, image } = imageInfo
+export interface iPreviewCompatibleImage {
+  imageInfo: {
+    alt?: string
+    childImageSharp?: any
+    image?: any
+  }
+}
+
+const PreviewCompatibleImage:React.FC<iPreviewCompatibleImage> = props => {
+  const { alt = '', childImageSharp, image } = props.imageInfo
 
   if (!!image && !!image.childImageSharp) {
     return (
@@ -15,8 +22,9 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     return <Img fluid={childImageSharp.fluid} alt={alt} />
   }
 
-  if (!!image && typeof image === 'string')
+  if (!!image && typeof image === 'string') {
     return <img src={image} alt={alt} />
+  }
 
   return null
 }
