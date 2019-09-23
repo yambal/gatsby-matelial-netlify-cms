@@ -8,6 +8,9 @@ module.exports = {
       'こんにちわ、世界',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-styled-components`,
+    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
