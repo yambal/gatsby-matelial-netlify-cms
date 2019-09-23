@@ -32,7 +32,7 @@ const IndexPageTemplate:React.FC<iIndexPageTemplate> = (props) => {
   } = props
 
   return (
-  <div className="hoge">
+  <React.Fragment>
     <FeatureImage src={props.featuredimage.childImageSharp.resize.src} />
     <Container fixed>
       <pre>{JSON.stringify(props.featuredimage.childImageSharp.resize, null, 2)}</pre>
@@ -81,7 +81,7 @@ const IndexPageTemplate:React.FC<iIndexPageTemplate> = (props) => {
         </div>
       </div>
     </section>
-  </div>
+  </React.Fragment>
   )
 }
 
