@@ -33,10 +33,7 @@ const IndexPageTemplate:React.FC<iIndexPageTemplate> = (props) => {
 
   return (
   <React.Fragment>
-    <FeatureImage src={props.featuredimage.childImageSharp.resize.src} />
-    <Container fixed>
-      <pre>{JSON.stringify(props.featuredimage.childImageSharp.resize, null, 2)}</pre>
-    </Container>
+    <FeatureImage imageInfo={featuredimage} />
 
     <section className="section section--gradient">
       <div className="container">
