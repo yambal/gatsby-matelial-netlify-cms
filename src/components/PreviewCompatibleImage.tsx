@@ -1,5 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 
 export interface iPreviewCompatibleImage {
   imageInfo: {
@@ -8,6 +9,18 @@ export interface iPreviewCompatibleImage {
     image?: any
   }
 }
+
+interface iClopImage {
+  src: string
+}
+const ClipImage = styled.div<iClopImage>`
+  background-image: url(${props => props.src});
+  position: absolute;
+  top: 0;
+  right:0;
+  bottom:0;
+  left:0;
+`
 
 const PreviewCompatibleImage:React.FC<iPreviewCompatibleImage> = props => {
   const { alt = '', childImageSharp, image } = props.imageInfo
@@ -23,7 +36,8 @@ const PreviewCompatibleImage:React.FC<iPreviewCompatibleImage> = props => {
   }
 
   if (!!image && typeof image === 'string') {
-    return <img src={image} alt={alt} />
+    //return <img src={image} alt={alt} />
+    return <ClipImage src={image}></ClipImage>
   }
 
   return null

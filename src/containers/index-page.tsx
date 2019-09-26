@@ -35,9 +35,6 @@ export const pageQuery = graphql`
             fluid(maxWidth: 1280, quality: 100) {
               ...GatsbyImageSharpFluid
             }
-            resize(height: 630, width: 1200) {
-              src
-            }
           }
         }
         image {

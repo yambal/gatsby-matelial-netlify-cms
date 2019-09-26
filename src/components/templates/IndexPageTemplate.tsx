@@ -7,6 +7,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 import FeatureImage from '../FeatureImage';
+import useSiteMetadata from '../SiteMetadata'
 
 interface iIndexPageTemplate {
   image: any
@@ -30,10 +31,17 @@ const IndexPageTemplate:React.FC<iIndexPageTemplate> = (props) => {
     intro,
     featuredimage
   } = props
+  const { aspectHomeFeatureImage } = useSiteMetadata()
+  console.log(aspectHomeFeatureImage)
 
   return (
   <React.Fragment>
-    <FeatureImage imageInfo={featuredimage} />
+    <FeatureImage imageInfo={featuredimage} aspect={aspectHomeFeatureImage}>
+      <Container>
+        {title}
+        {subheading}
+      </Container>
+    </FeatureImage>
 
     <section className="section section--gradient">
       <div className="container">

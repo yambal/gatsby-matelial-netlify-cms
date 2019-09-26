@@ -24,7 +24,7 @@ const theme = createMuiTheme({
   },
 });
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper:React.FC = ({ children }) => {
   const { title, description, lang } = useSiteMetadata()
   return (
     <ThemeProvider theme={theme}>
