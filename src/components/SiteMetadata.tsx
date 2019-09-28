@@ -4,6 +4,7 @@ interface iUseSiteMetadata {
   title: string
   description: string
   lang: string
+  aspectHomeFeatureImage: number
 }
 
 const useSiteMetadata = ():iUseSiteMetadata => {
@@ -15,6 +16,7 @@ const useSiteMetadata = ():iUseSiteMetadata => {
             title
             description
             lang
+            aspectHomeFeatureImage
           }
         }
       }

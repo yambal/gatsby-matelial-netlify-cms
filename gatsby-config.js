@@ -4,8 +4,8 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',
     lang: 'ja',
-    description:
-      'こんにちわ、世界',
+    description: 'こんにちわ、世界',
+    aspectHomeFeatureImage: 0.3
   },
   plugins: [
     {

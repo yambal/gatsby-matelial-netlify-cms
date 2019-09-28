@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -11,7 +11,7 @@ import TopManuList from './molecules/TopManuList';
 
 const Navbar:React.FC= () => {
   const [isTggleOpen, toggleDrawer] = useState(false);
-  const { title, description } = useSiteMetadata()
+  const { title } = useSiteMetadata()
 
   return (
     <React.Fragment>
@@ -20,11 +20,9 @@ const Navbar:React.FC= () => {
           <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => {toggleDrawer(!isTggleOpen)}}>
             <MenuIcon />
           </IconButton>
-          <Link to="/">
-            <Typography variant="h6" >
-              {title}
-            </Typography>
-          </Link>
+          <Typography variant="h6" onClick={()=>{navigate('/')}} style={{ cursor: 'pointer' }}>
+            {title}
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer open={isTggleOpen} onClose={() => {toggleDrawer(!isTggleOpen)}}>
