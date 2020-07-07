@@ -32,7 +32,7 @@
     "netlify-cms-media-library-uploadcare": "^0.5.2",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
-    "npm": "^6.11.3",
+    "npm": "^6.14.6",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
